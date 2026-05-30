@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highfield International Open School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--green:#0a8f2d;
+--darkgreen:#066320;
+--black:#111;
+--white:#fff;
+}
+
+body{
+background:#fff;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.logo-text h2{
+color:var(--green);
+font-size:1.2rem;
+}
+
+.logo-text p{
+font-size:.8rem;
+color:#666;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--green);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("building.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+padding:20px;
+animation:fadeUp 1s ease;
+}
+
+.hero h1{
+font-size:4.5rem;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--green);
+color:white;
+text-decoration:none;
+border-radius:40px;
+margin:10px;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--darkgreen);
+transform:translateY(-3px);
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* GENERAL */
+
+section{
+padding:90px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.5rem;
+color:var(--green);
+}
+
+.section-title p{
+color:#666;
+}
+
+/* STATS */
+
+.stats{
+background:var(--green);
+color:white;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+padding:50px;
+text-align:center;
+gap:20px;
+}
+
+.stat h2{
+font-size:3rem;
+}
+
+.stat p{
+font-size:1rem;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.about-text h3{
+color:var(--green);
+margin-bottom:15px;
+}
+
+/* CARDS */
+
+.programs,
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card,
+.feature{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:var(--green);
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:var(--green);
+color:white;
+}
+
+th,td{
+padding:15px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+/* ADMISSIONS */
+
+.admissions{
+background:#111;
+color:white;
+padding:80px 20px;
+border-radius:20px;
+text-align:center;
+}
+
+.admissions h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.contact{
+background:#f5f5f5;
+padding:50px;
+border-radius:20px;
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+.logo-text h2{
+font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-container">
+
+<div class="logo">
+<img src="logo.jpg" alt="Highfield Logo">
+
+<div class="logo-text">
+<h2>Highfield International Open School</h2>
+<p>We Labour To Serve</p>
+</div>
+</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#programmes">Programmes</a>
+<a href="#campus">Campus</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Excellence in Education Starts Here</h1>
+
+<p>
+Empowering students through quality education, flexible learning pathways, and internationally recognised academic programmes.
+</p>
+
+<a href="#contact" class="btn">Enroll Today</a>
+
+<a href="tel:+255750518978" class="btn">
+Call Us
+</a>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>6</h2>
+<p>Academic Programmes</p>
+</div>
+
+<div class="stat">
+<h2>2</h2>
+<p>Curriculum Pathways</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Student Support</p>
+</div>
+
+<div class="stat">
+<h2>5+</h2>
+<p>Learning Days Weekly</p>
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Us</h2>
+<p>Building Futures Through Education</p>
+</div>
+
+<div class="about">
+
+<img src="students.jpg" alt="Students">
+
+<div class="about-text">
+
+<h3>Welcome to Highfield International Open School</h3>
+
+<p>
+Highfield International Open School is a fully registered tuition centre under the Institute of Adult Education.
+</p>
+
+<br>
+
+<p>
+We offer Non-formal Secondary Education through both local and international curricula including NECTA QT, O-Level, A-Level, Cambridge IGCSE, Cambridge AS and Cambridge A2 programmes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="programmes">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Programmes</h2>
+</div>
+
+<div class="programs">
+
+<div class="card">
+<h3>NECTA QT</h3>
+<p>Flexible secondary education pathways.</p>
+</div>
+
+<div class="card">
+<h3>O-Level & A-Level</h3>
+<p>Local curriculum academic excellence.</p>
+</div>
+
+<div class="card">
+<h3>Cambridge IGCSE, AS & A2</h3>
+<p>Internationally recognised qualifications.</p>
+</div>
+
+</div>
+
+</div>
+
+</section> 
+<section id="campus">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our School Campus</h2>
+<p>A modern environment designed for learning and growth.</p>
+</div>
+
+<div class="about">
+
+<img src="building.jpg" alt="School Building">
+
+<div class="about-text">
+
+<h3>Welcome To Our Campus</h3>
+
+<p>
+Highfield International Open School provides a clean, safe and supportive environment where students can focus on achieving academic excellence.
+</p>
+
+<br>
+
+<p>
+Our campus reflects our commitment to quality education and creating opportunities for every learner to succeed.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="campus">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Campus</h2>
+<p>A modern learning environment</p>
+</div>
+
+<div class="about">
+
+<img src="building.jpg" alt="School Building">
+
+<div class="about-text">
+
+<h3>A Place To Grow</h3>
+
+<p>
+Our campus provides students with a safe, supportive and inspiring environment designed to encourage academic excellence and personal growth.
+</p>
+
+<br>
+
+<p>
+At Highfield International Open School, students benefit from dedicated teaching, flexible learning opportunities and a commitment to educational success.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Student Life & Campus</h2>
+</div>
+
+<div class="gallery">
+
+<img src="building.jpg" alt="Campus">
+
+<img src="students.jpg" alt="Students">
+
+<img src="class.jpg" alt="Classroom">
+
+<img src="building.jpg" alt="School Building">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Opening Hours</h2>
+</div>
+
+<table>
+
+<tr>
+<th>Day</th>
+<th>Hours</th>
+</tr>
+
+<tr>
+<td>Monday - Friday</td>
+<td>8:30 AM - 6:00 PM</td>
+</tr>
+
+<tr>
+<td>Saturday</td>
+<td>9:00 AM - 12:00 PM</td>
+</tr>
+
+<tr>
+<td>Sunday</td>
+<td>Closed</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="admissions">
+
+<h2>Admissions Open</h2>
+
+<p>
+Join Highfield International Open School and begin your journey toward academic success.
+</p>
+
+<br>
+
+<a href="tel:+255750518978" class="btn">
+Apply Today
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<br>
+
+<p>📍 Ngong Street, Dar es Salaam</p>
+<p>📮 Postcode: 14104</p>
+<p>📞 +255 750 518 978</p>
+
+<br>
+
+<p><strong>We Labour To Serve</strong></p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Highfield International Open School</h2>
+
+<p>We Labour To Serve</p>
+
+<br>
+
+<p>Ngong Street, Dar es Salaam</p>
+
+<p>+255 750 518 978</p>
+
+<br>
+
+<p>© 2026 Highfield International Open School</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/255750518978"
+target="_blank">
+WhatsApp Us
+</a>
+
+</body>
+</html>
